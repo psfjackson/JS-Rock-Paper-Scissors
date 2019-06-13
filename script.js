@@ -155,5 +155,5 @@ const computerPlay = function() {
     
       console.log(playGame());
   }
-  
+
 
