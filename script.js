@@ -148,6 +148,12 @@ const computerPlay = function() {
     console.log(playGame());
 
     } 
-      
 
-console.log(playGame())
+
+
+  function playGameBtn() {
+    
+      console.log(playGame());
+  }
+  
+
