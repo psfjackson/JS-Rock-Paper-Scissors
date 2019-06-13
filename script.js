@@ -120,12 +120,14 @@ const computerPlay = function() {
  
     if (playerScore === 5  || computerScore === 5) {
         if (playerScore > computerScore){
+          console.log("You win! " + playerScore + " to " + computerScore);
           alert ("You win! " + playerScore + " to " + computerScore);
           console.log(newGame());
           //alert("You win! " + playerScore + " to " + computerScore)
       }
       else if (playerScore === computerScore)
       {
+          console.log("You are tied!");
           alert ("You are tied!");
           console.log(newGame());
 
@@ -133,6 +135,7 @@ const computerPlay = function() {
 
       }
       else{
+          console.log("You Lose! " + computerScore + " to " + playerScore);
           alert ("You Lose! " + computerScore + " to " + playerScore);
           console.log(newGame());
 
