@@ -120,25 +120,29 @@ const computerPlay = function() {
  
     if (playerScore === 5  || computerScore === 5) {
         if (playerScore > computerScore){
-          return "You win! " + playerScore + " to " + computerScore;
+          alert ("You win! " + playerScore + " to " + computerScore);
+          console.log(newGame());
           //alert("You win! " + playerScore + " to " + computerScore)
       }
       else if (playerScore === computerScore)
       {
-          return "You are tied!";
+          alert ("You are tied!");
+          console.log(newGame());
+
           //alert("You are tied!");
 
       }
       else{
-          return "You Lose! " + computerScore + " to " + playerScore;
-          //alert("You Lose! " + computerScore + " to " + playerScore);
+          alert ("You Lose! " + computerScore + " to " + playerScore);
+          console.log(newGame());
+
+          // alert("You Lose! " + computerScore + " to " + playerScore);
 
       }
 
     } 
 
     console.log(playGame());
-    console.log(newGame());
 
     } 
       
