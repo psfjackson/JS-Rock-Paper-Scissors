@@ -1,3 +1,23 @@
+function addElement (msg) { 
+    // Create a new, plain <span> element
+    let sp1 = document.createElement("p");
+
+    sp1.classList.add("consoleReview");
+
+    // and give it some content 
+    let newContent = document.createTextNode(msg); 
+    // add the text node to the newly created div
+    sp1.appendChild(newContent); 
+
+    // Get a reference to the element, before we want to insert the element
+    let sp2 = document.getElementById("childElement");
+    // Get a reference to the parent element
+    let parentDiv = sp2.parentNode;
+
+    // Insert the new element into the DOM before sp2
+    parentDiv.insertBefore(sp1, sp2); 
+}
+
 const computerPlay = function() {
     let choice  = Math.floor(Math.random() * 3);
     switch (choice) {
@@ -10,8 +30,6 @@ const computerPlay = function() {
     }
     }
     
-  //Testing 'getComputerChoice
-  //console.log(computerPlay()); 
   
   const playRound = (playerSelection, computerSelection) =>{
     if (playerSelection === computerSelection) {
@@ -72,13 +90,13 @@ const computerPlay = function() {
     const score = function(winner) {
       if (winner === "CPU won") {
           computerScore++;
-          return console.log('The score is User: ' + playerScore + ' vs. CPU: ' + computerScore);
-      } else if (winner === "user won") {
+          console.log('The score is User: ' + playerScore + ' vs. CPU: ' + computerScore);
+        } else if (winner === "user won") {
           playerScore++;
-          return console.log('The score is User: ' + playerScore + ' vs. CPU: ' + computerScore);
+          console.log('The score is User: ' + playerScore + ' vs. CPU: ' + computerScore);
       } else {
-          return console.log('The score is User: ' + playerScore + ' vs. CPU: ' + computerScore);
-      }
+          console.log('The score is User: ' + playerScore + ' vs. CPU: ' + computerScore);
+        }
   
       }
 
@@ -117,7 +135,10 @@ const computerPlay = function() {
     console.log(computerSelection);
     console.log(playRound(playerSelection, computerSelection));
     console.log(score(playRound(playerSelection,  computerSelection)));
- 
+
+    addElement (playerSelection + ' (' + playerScore + ' : ' + computerScore + ') ' + computerSelection);
+    addElement (playRound(playerSelection, computerSelection));
+
     if (playerScore === 5  || computerScore === 5) {
         if (playerScore > computerScore){
           console.log("You win! " + playerScore + " to " + computerScore);
@@ -142,6 +163,7 @@ const computerPlay = function() {
           // alert("You Lose! " + computerScore + " to " + playerScore);
 
       }
+
 
     } 
 
