@@ -1,30 +1,54 @@
 body, html {
 
 height: 100%;
-width: 100;
+width: 100%;
+
 }
 
-.border-body {
-    padding: 75px;
-    background-color: rgba(0,0,0,.05) 
-    
+.left-area {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: rgba(0,0,0,.15);
+    position: fixed;
 }
 
-p, h1 {
+.right-area {
+    width: 50%;
+    height: 100%;
+    float:right;
+    background-color: rgba(0,0,0,.15);
+    text-align: right;
+    overflow: scroll;
+
+
+}
+
+.l-pad, .r-pad{
+    padding: 75px; 
+}
+
+p, h1,h2, .consoleReview{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgba(0,0,0,.85);
     margin-top: 0px;
     margin-bottom: 10px;
-    text-transform: uppercase;
 }
 
-p {
+p, h2 {
     font-size: 25px;
 
 }
 
 h1 {
     font-size: 75px;
+    text-transform: uppercase;
+
+}
+
+.consoleReview{
+    font-size: 15px;
+    margin-bottom: 5px;
 }
 
 .playGame{

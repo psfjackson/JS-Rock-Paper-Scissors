@@ -15,12 +15,14 @@
 
 
 
-function addElement () { 
+function addElement (msg) { 
 // Create a new, plain <span> element
-let sp1 = document.createElement("span");
+let sp1 = document.createElement("p");
+
+sp1.classList.add("consoleReview");
 
 // and give it some content 
-let newContent = document.createTextNode("Hi there and greetings!"); 
+let newContent = document.createTextNode(msg); 
 // add the text node to the newly created div
 sp1.appendChild(newContent); 
 
@@ -108,17 +110,11 @@ const computerPlay = function() {
       if (winner === "CPU won") {
           computerScore++;
           console.log('The score is User: ' + playerScore + ' vs. CPU: ' + computerScore);
-          //addTextNode('YES! ')
-          addElement ()
         } else if (winner === "user won") {
           playerScore++;
           console.log('The score is User: ' + playerScore + ' vs. CPU: ' + computerScore);
-          //addTextNode('YES! ')
-          addElement ()
       } else {
           console.log('The score is User: ' + playerScore + ' vs. CPU: ' + computerScore);
-          //addTextNode('YES! ')
-          addElement ()
         }
   
       }
@@ -158,7 +154,10 @@ const computerPlay = function() {
     console.log(computerSelection);
     console.log(playRound(playerSelection, computerSelection));
     console.log(score(playRound(playerSelection,  computerSelection)));
-    
+
+    addElement (playerSelection + ' (' + playerScore + ' : ' + computerScore + ') ' + computerSelection);
+    addElement (playRound(playerSelection, computerSelection));
+
     if (playerScore === 5  || computerScore === 5) {
         if (playerScore > computerScore){
           console.log("You win! " + playerScore + " to " + computerScore);
@@ -183,6 +182,7 @@ const computerPlay = function() {
           // alert("You Lose! " + computerScore + " to " + playerScore);
 
       }
+
 
     } 
 
