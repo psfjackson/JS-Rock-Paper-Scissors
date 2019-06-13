@@ -2,6 +2,7 @@ body, html {
 
 height: 100%;
 width: 100%;
+overflow: hidden;
 
 }
 
@@ -9,17 +10,18 @@ width: 100%;
     width: 50%;
     height: 100%;
     float: left;
-    background-color: rgba(200,200,200,1);
+    background-color: rgba(210,210,210,1);
     position: fixed;
 }
 
 .right-area {
     width: 50%;
     height: 100%;
-    background-color: rgba(200,200,200,1);
+    background-color: rgba(210,210,210,1);
     text-align: right;
     position: fixed;
     right: 0;
+    overflow: hidden;
 
 }
 
@@ -29,6 +31,8 @@ width: 100%;
 
 .r-pad {
     overflow: scroll;
+    height: 100%;
+    margin-right: -15px
 }
 
 p, h1,h2, .consoleReview{
@@ -59,7 +63,7 @@ h1 {
     width: 185px;
     border: 0px solid #ccc;
     background: #FA7268;    
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 35px;
     font-weight: 500;
