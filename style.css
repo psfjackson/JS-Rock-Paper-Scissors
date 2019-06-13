@@ -9,23 +9,26 @@ width: 100%;
     width: 50%;
     height: 100%;
     float: left;
-    background-color: rgba(0,0,0,.15);
+    background-color: rgba(200,200,200,1);
     position: fixed;
 }
 
 .right-area {
     width: 50%;
     height: 100%;
-    float:right;
-    background-color: rgba(0,0,0,.15);
+    background-color: rgba(200,200,200,1);
     text-align: right;
-    overflow: scroll;
-
+    position: fixed;
+    right: 0;
 
 }
 
 .l-pad, .r-pad{
     padding: 75px; 
+}
+
+.r-pad {
+    overflow: scroll;
 }
 
 p, h1,h2, .consoleReview{
